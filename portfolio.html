@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Портфоліо</title>
+    <title>Студія</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -15,41 +15,43 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
     />
-    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
-    <header class="header section">
-      <div class="header-list container">
-        <nav class="nav-list">
-          <a class="logo logo-header link" href="./index.html"
-            >Web<span class="second-word">Studio</span></a
-          >
-          <ul class="menu-list">
-            <li class="menu-item">
-              <a class="menu-link link" href="./index.html">Студія</a>
+    <header class="header">
+      <div class="header__container container">
+        <a class="logo header__logo link" href="./index.html"
+          >Web<span class="logo__second-word">Studio</span></a
+        >
+        <nav>
+          <ul class="menu">
+            <li class="menu__item">
+              <a class="menu__link link" href="./index.html">Студія</a>
             </li>
-            <li class="menu-item">
-              <a class="menu-link link current-page" href="./portfolio.html"
+            <li class="menu__item">
+              <a
+                class="menu__link link menu__link_current"
+                href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
-            <li class="menu-item">
-              <a class="menu-link link" href="">Контакти</a>
+            <li class="menu__item">
+              <a class="menu__link link" href="">Контакти</a>
             </li>
           </ul>
         </nav>
-        <ul class="contacts-list">
+        <ul class="contacts">
           <li>
-            <a class="contacts-link link" href="mailto:info@devstudio.com">
-              <svg class="contacts-icon" width="16" height="12">
+            <a class="contacts__link link" href="mailto:info@devstudio.com">
+              <svg class="contacts__icon" width="16" height="12">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
           <li>
-            <a class="contacts-link link" href="tel:+380961111111">
-              <svg class="contacts-icon" width="10" height="16">
+            <a class="contacts__link link" href="tel:+380961111111">
+              <svg class="contacts__icon" width="10" height="16">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
@@ -246,43 +248,39 @@
     </main>
 
     <footer class="footer">
-      <div class="container footer-container">
-        <div>
-          <a class="logo logo-footer link" href="./index.html"
-            >Web<span class="second-word">Studio</span></a
+      <div class="container footer__container">
+        <div class="logo-and-address-wrapper">
+          <a class="logo footer__logo link" href="./index.html"
+            >Web<span class="logo__second-word">Studio</span></a
           >
           <address>
-            <ul class="contacts-footer-list">
-              <li class="contacts-footer-list-item">
-                <a
-                  class="address-footer-link contacts-footer-link link"
-                  href="https://goo.gl/maps/MkYbbiRwNJyzcigK8"
-                  target="_blank"
-                  >м. Київ, пр-т Лесі Українки, 26</a
-                >
-              </li>
-              <li class="contacts-footer-list-item">
-                <a
-                  class="contacts-footer-link link"
-                  href="mailto:info@devstudio.com"
-                  >info@devstudio.com</a
-                >
-              </li>
-              <li class="contacts-footer-list-item">
-                <a class="contacts-footer-link link" href="tel:+380961111111"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-            </ul>
+            <a
+              class="contacts-footer-link address-footer-link link"
+              href="https://goo.gl/maps/MkYbbiRwNJyzcigK8"
+              target="_blank"
+              >м. Київ, пр-т Лесі Українки, 26</a
+            >
+
+            <a
+              class="contacts-footer-link link"
+              href="mailto:info@devstudio.com"
+              >info@devstudio.com</a
+            >
+
+            <a class="contacts-footer-link link" href="tel:+380961111111"
+              >+38 096 111 11 11</a
+            >
           </address>
         </div>
-        <div>
-          <b class="footer-title-text">Приєднуйтесь</b>
-          <ul class="socials-list">
+        <div class="socials-wrapper">
+          <b class="footer-title-text footer-title-text-socials"
+            >Приєднуйтесь</b
+          >
+          <ul class="socials">
             <li>
-              <a class="socials-link footer-socials-link" href="">
+              <a class="socials__link footer-socials-link" href="">
                 <svg
-                  class="socials-icon footer-socials-icon"
+                  class="socials__icon footer-socials-icon"
                   width="20"
                   height="20"
                 >
@@ -291,9 +289,9 @@
               </a>
             </li>
             <li>
-              <a class="socials-link footer-socials-link" href="">
+              <a class="socials__link footer-socials-link" href="">
                 <svg
-                  class="socials-icon footer-socials-icon"
+                  class="socials__icon footer-socials-icon"
                   width="20"
                   height="20"
                 >
@@ -302,9 +300,9 @@
               </a>
             </li>
             <li>
-              <a class="socials-link footer-socials-link" href="">
+              <a class="socials__link footer-socials-link" href="">
                 <svg
-                  class="socials-icon footer-socials-icon"
+                  class="socials__icon footer-socials-icon"
                   width="20"
                   height="20"
                 >
@@ -313,9 +311,9 @@
               </a>
             </li>
             <li>
-              <a class="socials-link footer-socials-link" href="">
+              <a class="socials__link footer-socials-link" href="">
                 <svg
-                  class="socials-icon footer-socials-icon"
+                  class="socials__icon footer-socials-icon"
                   width="20"
                   height="20"
                 >
@@ -326,28 +324,24 @@
           </ul>
         </div>
         <form>
-          <label for="subscription"
+          <label for="subscription" class="footer-subscription-field"
             ><b class="footer-title-text">Підпишіться на розсилку</b>
           </label>
-          <ul class="footer-form-list">
-            <li>
-              <input
-                type="email"
-                class="subscription-input"
-                name="email"
-                id="subscription"
-                placeholder="E-mail"
-              />
-            </li>
-            <li>
-              <button type="submit" class="subscription-btn">
-                Підписатися
-                <svg class="send-icon" width="24" height="24">
-                  <use href="./images/icons.svg#send"></use>
-                </svg>
-              </button>
-            </li>
-          </ul>
+          <div class="footer-form-wrapper">
+            <input
+              type="email"
+              class="subscription-input"
+              name="email"
+              id="subscription"
+              placeholder="E-mail"
+            />
+            <button type="submit" class="subscription-btn">
+              Підписатися
+              <svg class="send-icon" width="24" height="24">
+                <use href="./images/icons.svg#send"></use>
+              </svg>
+            </button>
+          </div>
         </form>
       </div>
     </footer>

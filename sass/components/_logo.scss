@@ -1,0 +1,22 @@
+.logo {
+  font-family: "Raleway", sans-serif;
+  @include font(26px, 700, 31px, 0.03em);
+  color: var(--highlight-color);
+}
+
+.logo__second-word {
+  color: var(--black-color);
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.footer__logo {
+  display: block;
+  margin-bottom: 20px;
+
+  .logo__second-word {
+    color: var(--white-color);
+  }
+}
