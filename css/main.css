@@ -29,6 +29,12 @@
   pointer-events: none;
 }
 
+.subscription-btn, .what-we-do__overlay, .features__icon-container, .socials__link, .modal__close-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 h1,
 h2,
 h3,
@@ -59,7 +65,7 @@ button {
   border: none;
 }
 
-.link {
+a {
   text-decoration: none;
 }
 
@@ -101,7 +107,20 @@ body {
   color: var(--white-color);
 }
 
-.section-title {
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section_no-padding-top {
+  padding-top: 0;
+}
+
+.section_grey-background {
+  background-color: var(--grey-bg);
+}
+
+.section__title {
   text-align: center;
   margin-bottom: 50px;
   font-size: 36px;
@@ -137,9 +156,6 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 30px;
   height: 30px;
   border-radius: 50%;
@@ -306,9 +322,6 @@ body {
 }
 
 .socials__link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -436,19 +449,11 @@ body {
 }
 
 .features {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.features__list {
   display: flex;
   gap: 30px;
 }
 
 .features__icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 30px;
   width: 270px;
   height: 120px;
@@ -474,10 +479,6 @@ body {
 }
 
 .what-we-do {
-  padding-bottom: 94px;
-}
-
-.what-we-do__list {
   display: flex;
   gap: 30px;
 }
@@ -490,9 +491,6 @@ body {
   position: absolute;
   bottom: 0;
   left: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
   height: 70px;
   font-size: 14px;
@@ -505,12 +503,6 @@ body {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-  background-color: var(--grey-bg);
-}
-
-.team__list {
   display: flex;
   gap: 30px;
 }
@@ -535,7 +527,7 @@ body {
   letter-spacing: 0.03em;
 }
 
-.team__role {
+.team__text {
   margin-bottom: 16px;
   font-size: 16px;
   font-weight: 400;
@@ -545,11 +537,6 @@ body {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.clients__list {
   display: flex;
   gap: 30px;
 }
@@ -679,9 +666,6 @@ body {
 }
 
 .subscription-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: 10px;
   min-width: 200px;
   min-height: 50px;
@@ -699,19 +683,14 @@ body {
   fill: currentColor;
 }
 
-.projects {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.filters-list {
+.filters {
   display: flex;
   gap: 8px;
   justify-content: center;
   margin-bottom: 50px;
 }
 
-.filters-button {
+.filters__button {
   padding: 6px 22px;
   font-size: 16px;
   font-weight: 500;
@@ -722,37 +701,33 @@ body {
   border-radius: 4px;
   transition: color var(--main-transition), background-color var(--main-transition), box-shadow var(--main-transition), border-radius var(--main-transition);
 }
-.filters-button:first-child {
-  padding-left: 25px;
-  padding-right: 25px;
-}
-.filters-button:hover, .filters-button:focus {
+.filters__button:hover, .filters__button:focus {
   color: var(--white-color);
   background-color: var(--highlight-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 }
 
-.projects-list {
+.projects {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
 }
 
-.projects-link {
+.projects__link {
   display: block;
   transition: box-shadow var(--main-transition);
 }
-.projects-link:hover, .projects-link:focus {
+.projects__link:hover, .projects__link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.projects-item-overlay {
+.projects__overlay {
   position: relative;
   overflow: hidden;
 }
 
-.projects-item-overlay-desc {
+.projects__desc {
   position: absolute;
   top: 100%;
   left: 0;
@@ -767,7 +742,7 @@ body {
   background-color: rgba(33, 150, 243, 0.9);
   transition: transform var(--main-transition);
 }
-.projects-link:hover .projects-item-overlay-desc, .projects-link:focus .projects-item-overlay-desc {
+.projects__link:hover .projects__desc, .projects__link:focus .projects__desc {
   transform: translate(0, -100%);
 }
 
@@ -786,9 +761,6 @@ body {
   color: var(--primary-color);
   transition: color var(--main-transition);
 }
-.projects-item-title:hover, .projects-item-title:focus {
-  color: var(--highlight-color);
-}
 
 .projects-item-category {
   font-size: 16px;
@@ -797,7 +769,4 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-color);
   transition: color var(--main-transition);
-}
-.projects-item-category:focus, .projects-item-category:hover {
-  color: var(--highlight-color);
 }/*# sourceMappingURL=main.css.map */

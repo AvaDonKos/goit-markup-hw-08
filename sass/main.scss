@@ -2,12 +2,14 @@
 @import "./utils/visually-hidden";
 @import "./utils/is-hidden";
 @import "./utils/mixins";
+@import "./utils/_placeholders";
 
 @import "./base/common";
 @import "./base/container";
 
 @import "./components/logo";
-@import "./components/_section-title";
+@import "./components/section";
+@import "./components/_section__title";
 @import "./components/modal-window";
 @import "./components/socials";
 
@@ -18,4 +20,5 @@
 @import "./layout/team";
 @import "./layout/clients";
 @import "./layout/footer";
+@import "./layout/filters";
 @import "./layout/projects";
