@@ -23,7 +23,7 @@
         <a class="logo header__logo" href="./index.html"
           >Web<span class="logo__second-word">Studio</span></a
         >
-        <nav>
+        <!-- <nav>
           <ul class="menu">
             <li class="menu__item">
               <a class="menu__link menu__link_current" href="./index.html"
@@ -55,25 +55,28 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul>
+        </ul> -->
+        <button type="button" class="header__button">
+          <svg width="24" height="16">
+            <use href="./images/icons.svg#menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
     <main>
       <section class="hero">
-        <div class="container">
-          <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero__button" type="button" data-modal-open>
-            Замовити послугу
-          </button>
-        </div>
+        <h1 class="hero__title">Ефективні рішення для вашого бізнесу</h1>
+        <button class="hero__button" type="button" data-modal-open>
+          Замовити послугу
+        </button>
       </section>
 
       <section class="section">
         <div class="container">
           <h2 class="section__title visually-hidden">Особливості</h2>
           <ul class="features">
-            <li>
+            <li class="features__item">
               <div class="features__icon-container">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#antenna"></use>
@@ -85,7 +88,7 @@
                 формування позиції.
               </p>
             </li>
-            <li>
+            <li class="features__item">
               <div class="features__icon-container">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#clock"></use>
@@ -97,7 +100,7 @@
                 тягне у себе.
               </p>
             </li>
-            <li>
+            <li class="features__item">
               <div class="features__icon-container">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#diagram"></use>
@@ -108,7 +111,7 @@
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
-            <li>
+            <li class="features__item">
               <div class="features__icon-container">
                 <svg width="70" height="70">
                   <use href="./images/icons.svg#astronaut"></use>
@@ -124,7 +127,7 @@
         </div>
       </section>
 
-      <section class="section section_no-padding-top">
+      <!--<section class="section section_no-padding-top">
         <div class="container">
           <h2 class="section__title">Чим ми займаємося</h2>
           <ul class="what-we-do">
@@ -157,7 +160,7 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <section class="section section_grey-background">
         <div class="container">
@@ -165,10 +168,11 @@
           <ul class="team">
             <li class="team__item">
               <img
-                src="./images/ihor-demianenko.jpg"
+                class="team__image"
+                src="./images/ihor-demianenko-mobile.jpg"
                 alt="Ігор Дем'яненко"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <div class="team__description">
                 <h3 class="team__title">Ігор Дем'яненко</h3>
@@ -207,10 +211,11 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/olha-riepina.jpg"
+                class="team__image"
+                src="./images/olha-riepina-mobile.jpg"
                 alt="Ольга Рєпіна"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <div class="team__description">
                 <h3 class="team__title">Ольга Рєпіна</h3>
@@ -249,10 +254,11 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/mykola-tarasov.jpg"
+                class="team__image"
+                src="./images/mykola-tarasov-mobile.jpg"
                 alt="Микола Тарасов"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <div class="team__description">
                 <h3 class="team__title">Микола Тарасов</h3>
@@ -291,10 +297,11 @@
             </li>
             <li class="team__item">
               <img
-                src="./images/mykhailo-yermakov.jpg"
+                class="team__image"
+                src="./images/mykhailo-yermakov-mobile.jpg"
                 alt="Михайло Єрмаков"
-                width="270"
-                height="260"
+                width="450"
+                height="460"
               />
               <div class="team__description">
                 <h3 class="team__title">Михайло Єрмаков</h3>
@@ -334,8 +341,8 @@
           </ul>
         </div>
       </section>
-
-      <section class="section">
+    
+    <section class="section">
         <div class="container">
           <h2 class="section__title">Постійні клієнти</h2>
           <ul class="clients">
@@ -414,15 +421,15 @@
           </ul>
         </div>
       </section>
-    </main>
+    </main> 
 
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer__container">
         <div class="logo-and-address-wrapper">
           <a class="logo footer__logo" href="./index.html"
             >Web<span class="logo__second-word">Studio</span></a
           >
-          <address>
+          <address class="address">
             <a
               class="contacts-footer-link address-footer-link"
               href="https://goo.gl/maps/MkYbbiRwNJyzcigK8"
@@ -443,7 +450,7 @@
           <b class="footer-title-text footer-title-text-socials"
             >Приєднуйтесь</b
           >
-          <ul class="socials">
+          <ul class="socials footer__socials">
             <li>
               <a class="socials__link footer-socials-link" href="">
                 <svg
@@ -512,7 +519,8 @@
         </form>
       </div>
     </footer>
-    <div class="backdrop is-hidden" data-modal>
+    
+    <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
           <svg class="modal__close-icon" width="11" height="11">
@@ -583,7 +591,8 @@
           <button type="submit" class="modal-form-submit">Відправити</button>
         </form>
       </div>
-    </div>
+    </div> -->
+
     <script src="./js/modal.js"></script>
   </body>
 </html>
