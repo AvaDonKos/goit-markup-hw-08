@@ -19,11 +19,11 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container container">
+      <div class="container header__container">
         <a class="logo header__logo" href="./index.html"
           >Web<span class="logo__second-word">Studio</span></a
         >
-        <!-- <nav>
+        <nav class="navigation">
           <ul class="menu">
             <li class="menu__item">
               <a class="menu__link menu__link_current" href="./index.html"
@@ -55,12 +55,65 @@
               +38 096 111 11 11</a
             >
           </li>
-        </ul> -->
-        <button type="button" class="header__button">
+        </ul>
+        <button type="button" class="mobile-menu__button" data-menu-open>
           <svg width="24" height="16">
-            <use href="./images/icons.svg#menu"></use>
+            <use href="./images/icons.svg#burger"></use>
           </svg>
         </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container">
+          <button
+            type="button"
+            class="mobile-menu__button mobile-menu__close-btn"
+            data-menu-close
+          >
+            <svg class="mobile-menu__close-icon" width="19" height="19">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__menu-link" href="">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__menu-link" href="">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__menu-link" href="">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts">
+            <li>
+              <a class="mobile-menu__contacts-tel" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-menu__contacts-mail"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -341,8 +394,8 @@
           </ul>
         </div>
       </section>
-    
-    <section class="section">
+
+      <section class="section">
         <div class="container">
           <h2 class="section__title">Постійні клієнти</h2>
           <ul class="clients">
@@ -421,7 +474,7 @@
           </ul>
         </div>
       </section>
-    </main> 
+    </main>
 
     <footer class="footer section">
       <div class="container footer__container">
@@ -519,7 +572,7 @@
         </form>
       </div>
     </footer>
-    
+
     <!-- <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="modal__close-btn" data-modal-close>
@@ -592,7 +645,7 @@
         </form>
       </div>
     </div> -->
-
-    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
+    <!-- <script src="./js/modal.js"></script> -->
   </body>
 </html>
