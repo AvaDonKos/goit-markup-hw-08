@@ -230,6 +230,12 @@ body {
   background-color: var(--grey-bg);
 }
 
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
 .section__title {
   margin-bottom: 30px;
   text-align: center;
@@ -254,8 +260,9 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
+  max-width: 450px;
+  min-height: 609px;
   padding: 40px;
   background-color: var(--white-color);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -282,7 +289,7 @@ body {
   text-align: center;
   font-size: 20px;
   font-weight: 700;
-  line-height: 1.15;
+  line-height: 1.5;
   letter-spacing: 0.03em;
 }
 
@@ -362,9 +369,9 @@ body {
   outline: none;
 }
 .modal-form-message::placeholder {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.1666666667;
+  line-height: 1.1428571429;
   letter-spacing: 0.01em;
   color: rgba(117, 117, 117, 0.5);
 }
@@ -374,9 +381,9 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 400;
-  line-height: 1.7142857143;
+  line-height: 1.1666666667;
   letter-spacing: 0.03em;
   color: var(--secondary-color);
 }
@@ -425,6 +432,24 @@ body {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+    min-height: 581px;
+  }
+  .modal-form-message::placeholder {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.1666666667;
+    letter-spacing: 0.01em;
+  }
+  .modal-form-checkbox-wrapper {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.7142857143;
+    letter-spacing: 0.03em;
+  }
+}
 .socials {
   display: flex;
   justify-content: center;
@@ -566,19 +591,23 @@ body {
 .hero {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  padding-right: 60px;
-  padding-left: 60px;
-  text-align: center;
+  max-width: 1600px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .hero__title {
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 30px;
+  max-width: 360px;
+  text-align: center;
   font-size: 26px;
   font-weight: 900;
   line-height: 1.6153846154;
@@ -588,6 +617,8 @@ body {
 }
 
 .hero__button {
+  margin-left: auto;
+  margin-right: auto;
   min-width: 200px;
   min-height: 50px;
   font-size: 16px;
@@ -603,19 +634,39 @@ body {
   background-color: #188ce8;
 }
 
+@media screen and (min-width: 768px) {
+  .hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-tablet.webp");
+  }
+}
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-desktop.webp");
+  }
+  .hero__title {
+    max-width: 696px;
+    font-size: 44px;
+    font-weight: 900;
+    line-height: 1.3636363636;
+    letter-spacing: 0.06em;
+  }
+  .hero__button {
+    min-width: 216px;
+  }
+}
+.features {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
 .features__icon-container {
   margin-bottom: 30px;
   width: 100%;
   height: 120px;
   background-color: var(--grey-bg);
   border-radius: 4px;
-}
-
-.features__item {
-  margin-bottom: 30px;
-}
-.features__item:last-child {
-  margin-bottom: 0;
 }
 
 .features__title {
@@ -636,6 +687,26 @@ body {
   color: var(--secondary-color);
 }
 
+@media screen and (min-width: 768px) {
+  .features {
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+  .features__item {
+    width: calc(50% - 15px);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .features {
+    flex-wrap: nowrap;
+  }
+  .features__item {
+    width: auto;
+  }
+  .features__icon-container {
+    width: 270px;
+  }
+}
 .what-we-do {
   display: flex;
   gap: 30px;
