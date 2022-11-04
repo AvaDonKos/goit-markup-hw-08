@@ -54,6 +54,10 @@
   }
 }
 
+.mobile-menu__menu-link_current {
+  color: var(--highlight-color);
+}
+
 .mobile-menu__contacts {
   margin-bottom: 64px;
   display: flex;

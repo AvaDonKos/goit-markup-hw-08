@@ -1,5 +1,4 @@
 .footer {
-  text-align: center;
   background-color: var(--dark-bg);
 }
 
@@ -13,8 +12,15 @@
 //   flex-grow: 1;
 // }
 
+.logo-and-address-wrapper {
+  text-align: center;
+}
+
 .address {
   margin-bottom: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
 }
 
 .contacts-footer-link {
@@ -23,11 +29,7 @@
   font-style: normal;
   color: rgba(255, 255, 255, 0.6);
   transition: color var(--main-transition);
-
-  &:not(:last-child) {
-    // margin-bottom: 9px;
-    margin-bottom: 8px;
-  }
+  // margin-bottom: 9px;
 }
 
 .address-footer-link {
@@ -44,7 +46,8 @@
 // }
 
 .footer-title-text {
-  display: inline-block;
+  display: block;
+  text-align: center;
   @include font(14px, 700, 16px, 0.03em);
   text-transform: uppercase;
   color: var(--white-color);
@@ -63,7 +66,7 @@
 }
 
 .footer-subscription-field {
-  display: inline-block;
+  display: block;
   margin-bottom: 20px;
 }
 
@@ -74,8 +77,11 @@
 
 .subscription-input {
   // width: 358px;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 20px;
   width: 100%;
+  max-width: 450px;
   height: 50px;
   padding-left: 16px;
   display: flex;
@@ -109,4 +115,76 @@
 
 .send-icon {
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .logo-and-address-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+    margin-right: 165px;
+    padding-left: 61px;
+  }
+
+  .footer__logo {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .socials-wrapper {
+    display: inline-flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .footer__container {
+    display: flex;
+    align-items: baseline;
+  }
+
+  .logo-and-address-wrapper {
+    margin-right: 70px;
+    padding-left: 0;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .footer__logo {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .address {
+    margin-bottom: 0;
+  }
+
+  .socials-wrapper {
+    margin-right: 93px;
+  }
+
+  .footer__socials {
+    margin-bottom: 0;
+  }
+
+  .footer-form-wrapper {
+    display: flex;
+    gap: 12px;
+  }
+
+  .footer-title-text {
+    text-align: left;
+  }
+
+  .subscription-input {
+    width: 358px;
+  }
+
+  .subscription-btn {
+    height: 50px;
+  }
 }

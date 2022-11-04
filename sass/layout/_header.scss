@@ -102,6 +102,16 @@
   .contacts__icon {
     fill: currentColor;
   }
+
+  .contacts__icon.envelope-icon {
+    width: 14px;
+    height: 10px;
+  }
+
+  .contacts__icon.smartphone-icon {
+    width: 10px;
+    height: 14px;
+  }
 }
 
 // @MEDIA 1200px
@@ -119,5 +129,15 @@
   .contacts__link {
     gap: 10px;
     @include font(14px, 500, 16px, 0.02em);
+  }
+
+  .contacts__icon.envelope-icon {
+    width: 16px;
+    height: 12px;
+  }
+
+  .contacts__icon.smartphone-icon {
+    width: 10px;
+    height: 16px;
   }
 }
