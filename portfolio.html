@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Студія</title>
+    <title>Портфоліо</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -19,19 +19,17 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__container container">
+      <div class="container header__container">
         <a class="logo header__logo" href="./index.html"
           >Web<span class="logo__second-word">Studio</span></a
         >
-        <nav>
+        <nav class="navigation">
           <ul class="menu">
             <li class="menu__item">
               <a class="menu__link" href="./index.html">Студія</a>
             </li>
             <li class="menu__item">
-              <a
-                class="menu__link menu__link_current"
-                href="./portfolio.html"
+              <a class="menu__link menu__link_current" href="./portfolio.html"
                 >Портфоліо</a
               >
             </li>
@@ -43,7 +41,7 @@
         <ul class="contacts">
           <li>
             <a class="contacts__link" href="mailto:info@devstudio.com">
-              <svg class="contacts__icon" width="16" height="12">
+              <svg class="contacts__icon envelope-icon">
                 <use href="./images/icons.svg#envelope"></use>
               </svg>
               info@devstudio.com</a
@@ -51,13 +49,75 @@
           </li>
           <li>
             <a class="contacts__link" href="tel:+380961111111">
-              <svg class="contacts__icon" width="10" height="16">
+              <svg class="contacts__icon smartphone-icon">
                 <use href="./images/icons.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11</a
             >
           </li>
         </ul>
+        <button type="button" class="mobile-menu__button" data-menu-open>
+          <svg width="24" height="16">
+            <use href="./images/icons.svg#burger"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="mobile-menu" data-menu>
+        <div class="mobile-menu__container">
+          <button
+            type="button"
+            class="mobile-menu__button mobile-menu__close-btn"
+            data-menu-close
+          >
+            <svg class="mobile-menu__close-icon" width="19" height="19">
+              <use href="./images/icons.svg#close"></use>
+            </svg>
+          </button>
+          <ul class="mobile-menu__list">
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__menu-link" href="">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                class="mobile-menu__menu-link mobile-menu__menu-link_current"
+                href="./portfolio.html"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a class="mobile-menu__menu-link" href="">Контакти</a>
+            </li>
+          </ul>
+          <ul class="mobile-menu__contacts">
+            <li>
+              <a class="mobile-menu__contacts-tel" href="tel:+380961111111">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li>
+              <a
+                class="mobile-menu__contacts-mail"
+                href="mailto:info@devstudio.com"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-menu__socials">
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Instagram</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Twitter</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">Facebook</a>
+            </li>
+            <li class="mobile-menu__socials-item">
+              <a class="mobile-menu__socials-link" href="">LinkedIn</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -247,13 +307,13 @@
       </section>
     </main>
 
-    <footer class="footer">
+    <footer class="footer section">
       <div class="container footer__container">
         <div class="logo-and-address-wrapper">
           <a class="logo footer__logo" href="./index.html"
             >Web<span class="logo__second-word">Studio</span></a
           >
-          <address>
+          <address class="address">
             <a
               class="contacts-footer-link address-footer-link"
               href="https://goo.gl/maps/MkYbbiRwNJyzcigK8"
@@ -261,9 +321,7 @@
               >м. Київ, пр-т Лесі Українки, 26</a
             >
 
-            <a
-              class="contacts-footer-link"
-              href="mailto:info@devstudio.com"
+            <a class="contacts-footer-link" href="mailto:info@devstudio.com"
               >info@devstudio.com</a
             >
 
@@ -276,7 +334,7 @@
           <b class="footer-title-text footer-title-text-socials"
             >Приєднуйтесь</b
           >
-          <ul class="socials">
+          <ul class="socials footer__socials">
             <li>
               <a class="socials__link footer-socials-link" href="">
                 <svg
@@ -345,5 +403,82 @@
         </form>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal__close-btn" data-modal-close>
+          <svg class="modal__close-icon" width="11" height="11">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal__title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc">Ім'я</span>
+            <span class="modal-form-input-wrapper">
+              <input type="text" class="modal-form-input" name="user_name" />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#person"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc">Телефон</span>
+            <span class="modal-form-input-wrapper">
+              <input type="tel" class="modal-form-input" name="user_tel" />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-form-field">
+            <span class="modal-form-input-desc">Пошта</span>
+            <span class="modal-form-input-wrapper">
+              <input type="email" class="modal-form-input" name="user_mail" />
+              <svg class="modal-form-icon" width="18" height="18">
+                <use href="./images/icons.svg#email"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="modal-form-field modal-form-field-last">
+            <span class="modal-form-input-desc">Коментар</span>
+            <textarea
+              class="modal-form-message"
+              placeholder="Введіть текст"
+            ></textarea>
+          </label>
+          <label class="modal-form-checkbox-wrapper">
+            <input
+              type="checkbox"
+              class="modal-form-checkbox visually-hidden"
+              name="user_policy"
+              required
+            />
+            <span class="modal-form-checkbox-icon-wrapper">
+              <svg class="modal-form-checkbox-icon" width="16" height="15">
+                <use href="./images/icons.svg#checkbox"></use>
+              </svg>
+              <svg
+                class="modal-form-checkbox-icon-overlay"
+                width="16"
+                height="15"
+              >
+                <use href="./images/icons.svg#check"></use>
+              </svg>
+            </span>
+            <span
+              >Погоджуюся з розсилкою та приймаю &nbsp;<a
+                href=""
+                class="modal-policy-link"
+                >Умови договору</a
+              ></span
+            >
+          </label>
+          <button type="submit" class="modal-form-submit">Відправити</button>
+        </form>
+      </div>
+    </div>
+    <script src="./js/mobile-menu.js"></script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
