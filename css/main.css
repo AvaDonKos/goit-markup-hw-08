@@ -1074,6 +1074,11 @@ body {
   border-radius: 4px;
 }
 
+@media screen and (min-width: 768px) {
+  .filters {
+    justify-content: center;
+  }
+}
 .projects {
   display: flex;
   gap: 30px;
@@ -1140,4 +1145,23 @@ body {
   letter-spacing: 0.03em;
   color: var(--secondary-color);
   transition: color var(--main-transition);
+}
+
+@media screen and (min-width: 768px) {
+  .projects__item {
+    width: calc(50% - 15px);
+  }
+  .projects__link {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  .projects-item-description {
+    flex-grow: 1;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: calc(33.3333333333% - 20px);
+  }
 }/*# sourceMappingURL=main.css.map */
