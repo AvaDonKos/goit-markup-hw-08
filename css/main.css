@@ -1050,10 +1050,10 @@ body {
   }
 }
 .filters {
+  margin-bottom: 40px;
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
-  margin-bottom: 50px;
 }
 
 .filters__button {
@@ -1078,6 +1078,11 @@ body {
   display: flex;
   gap: 30px;
   flex-wrap: wrap;
+}
+
+.projects__item {
+  width: 100%;
+  max-width: 450px;
 }
 
 .projects__link {

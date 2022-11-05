@@ -4,6 +4,11 @@
   flex-wrap: wrap;
 }
 
+.projects__item {
+  width: 100%;
+  max-width: 450px;
+}
+
 .projects__link {
   display: block;
   transition: box-shadow var(--main-transition);

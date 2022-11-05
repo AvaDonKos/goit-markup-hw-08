@@ -1,8 +1,10 @@
 .filters {
+  // margin-bottom: 50px;
+  margin-bottom: 40px;
   display: flex;
+  // justify-content: center;
+  flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
-  margin-bottom: 50px;
 }
 
 .filters__button {
